@@ -7,7 +7,6 @@ import reportWebVitals from './reportWebVitals'
 import { sendToVercelAnalytics } from './vitals'
 import { ThemeProvider } from '@mui/material/styles'
 import theme from './theme'
-import { ContextProvider } from './context'
 
 const rootElement = document.getElementById('root')
 const root = ReactDOM.createRoot(rootElement)
@@ -16,9 +15,7 @@ root.render(
   <StrictMode>
     <BrowserRouter>
       <ThemeProvider theme={theme}>
-        <ContextProvider>
-          <App />
-        </ContextProvider>
+        <App />
       </ThemeProvider>
     </BrowserRouter>
   </StrictMode>
